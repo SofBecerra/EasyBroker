@@ -38,8 +38,13 @@ body {
   background-repeat: no-repeat; /* Evita la repetición de la imagen */
 }
 
-p, h6, h5 {
+h6, h5 {
   color:#fff
+}
+
+p {
+  color:#000000;
+  text-shadow: 1px 1px 2px rgba(80, 73, 73, 0.5);
 }
 
 .destacado {
@@ -54,4 +59,8 @@ p, h6, h5 {
   to {
     color: blue;
   }
+}
+
+.card-transparent {
+  background-color: rgba(255, 255, 255, 0.5);
 }
