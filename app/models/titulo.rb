@@ -3,15 +3,29 @@ class Titulo < ApplicationRecord
   require 'net/http'
   require 'json'
 
-  url = URI("https://api.easybroker.com/v1/properties?page=1&limit=20")
+  # pages = (1..25)
+  # pages.each do |num|
+  num = 1
+  loop do
+  url = URI("https://api.stagingeb.com/v1/properties?page=#{num}&limit=20")
 
   http = Net::HTTP.new(url.host, url.port)
   http.use_ssl = true
 
   request = Net::HTTP::Get.new(url)
   request["accept"] = 'application/json'
-  request["X-Authorization"] = 'hl1cksubmiknligs7l1psug9wt76bd'
+  request["X-Authorization"] = 'l7u502p8v46ba3ppgvj5y2aad50lb9'
 
-  response = http.request(request)
-  puts response.read_body
+  response = JSON.parse(http.request(request).read_body)
+
+   propertys =  response["content"]
+   if propertys.empty?
+    puts "Fin de las propiedades"
+    break
+  end
+   propertys.each do |propiedad|
+   puts propiedad['title']
+    end
+    num += 1
+  end
 end

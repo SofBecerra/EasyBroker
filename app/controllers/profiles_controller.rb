@@ -47,8 +47,7 @@ class ProfilesController < ApplicationController
 
     end
 
-    def desarollador
-
+    def desarolladora
     end
 
     private

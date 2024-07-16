@@ -23,19 +23,31 @@ las áreas de la empresa.</p>
         <div class= "container d-flex justify-content-center mb-5">
    <img src="<%= asset_path('foto.jpeg') %>" alt="Descripción de la imagen" class="imagen-redonda">
    </div>
-
-    <div class= "container d-flex justify-content-center ">
-<%= link_to " Cuentanos sobre algun Libro" , "https://github.com/SofBecerra/letpay/blob/master/app/models/user.rb", class: "btn  bi bi-book custom-icon custom-icon custom-btn" %>
+  <div class= "container d-flex justify-content-center ">
+    <div class="mx-3" >
+    <%= link_to " " , "https://troopl.com/sofiabecerrra", class: "btn  bi bi-person custom-icon custom-icon custom-btn ", target: "_blank"  %>
+    </div >
+    <div class="mx-3">
+    <%= link_to " " , "https://www.linkedin.com/in/sofia-becerra-de-jesus-a0a7b81a7/", class: "btn  bi bi-linkedin custom-icon custom-icon custom-btn ", target: "_blank"  %>
+    </div>
+    </div>
+    <div class= "container d-flex justify-content-center mt-4">
+<%= link_to " Cuentanos sobre algun libro" ,  libro_path , class: "btn  bi bi-book custom-icon custom-icon custom-btn" %>
    </div>
        <div class= "container d-flex justify-content-center mt-4">
 
-<%= link_to " Te consideras el mejor desarrolador web" , "https://github.com/SofBecerra/letpay/blob/master/app/models/user.rb", class: "btn  bi bi-laptop custom-icon custom-icon custom-btn" %>
+<%= link_to " ¿Te consideras el mejor desarrollador web?" , desarolladora_path , class: "btn  bi bi-laptop custom-icon custom-icon custom-btn" %>
  </div>
   <div class= "container   d-flex justify-content-center  mt-4 mb-2 ">
-<%= link_to "  Link ejemplo codigo gist" , "https://github.com/SofBecerra/letpay/blob/master/app/models/user.rb", class: "btn  bi bi-github custom-icon custom-icon custom-btn ", target: "_blank"  %>
+    <%= link_to "  Link mi codigo gits " , "https://gist.github.com/SofBecerra/d839867e7f01c9d88b9baf28e301541b", class: "btn  bi bi-github custom-icon custom-icon custom-btn ", target: "_blank"  %>
+</div>
+<div class= "container   d-flex justify-content-center  mt-4 mb-2 ">
+<%= link_to "  Link codigo gist titulo Api " , "https://gist.github.com/SofBecerra/b882023a61737c095cea1d1c62b93c7d", class: "btn  bi bi-github custom-icon custom-icon custom-btn ", target: "_blank"  %>
+     </div>
     </div>
-<h6>Este código que aplica color a los usuarios considero que es una buena práctica que combina front-end y back-end para aplicar colores a los usuarios </h6>
     </div>
     </div>
    </div>
 </div>
+
+
