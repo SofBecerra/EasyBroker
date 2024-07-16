@@ -7,7 +7,7 @@ class Titulo < ApplicationRecord
   # pages.each do |num|
   num = 1
   loop do
-  url = URI("https://api.stagingeb.com/v1/properties?page=#{num}&limit=20")
+  url = URI("https://api.stagingeb.com/v1/properties?page=#{num}&limit=50")
 
   http = Net::HTTP.new(url.host, url.port)
   http.use_ssl = true

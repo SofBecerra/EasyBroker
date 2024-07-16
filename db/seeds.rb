@@ -17,7 +17,7 @@ require 'json'
 # pages.each do |num|
 num = 1
 loop do
-url = URI("https://api.stagingeb.com/v1/properties?page=#{num}&limit=20")
+url = URI("https://api.stagingeb.com/v1/properties?page=#{num}&limit=50")
 
 http = Net::HTTP.new(url.host, url.port)
 http.use_ssl = true
@@ -30,7 +30,7 @@ response = JSON.parse(http.request(request).read_body)
 
  propertys =  response["content"]
  if propertys.empty?
-  puts "No hay más propiedades disponibles. Terminando la búsqueda."
+  puts "Fin de las propiedades"
   break
 end
  propertys.each do |propiedad|
